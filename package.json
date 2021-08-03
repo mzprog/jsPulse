@@ -1,0 +1,16 @@
+{
+  "name": "julse",
+  "version": "1.0.0",
+  "description": "A simple js framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pulse",
+    "webserver",
+    "framework"
+  ],
+  "author": "Mohamad Zbib",
+  "license": "ISC"
+}
