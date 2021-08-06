@@ -1,3 +1,6 @@
+import { RouteExpression } from "./RouteExpression.js"
+import { RouteFinder } from "./RouteFinder.js"
+
 export class Route{
     defaultMethod = "index"
 
@@ -6,7 +9,7 @@ export class Route{
         'POST': []
     }
 
-    setDefaultMeth(name) {
+    setDefaultMethod(name) {
         defaultMethod = name
     }
 
@@ -19,22 +22,31 @@ export class Route{
     }
 
     #create(verb, from, to){
+        if(from != "/"){
+            from = from.trim()
+        }
+        let exp = new RouteExpression(from, to)
         this.route[verb].push({
-            'from': from,
-            'to': to
+            'route': exp.route,
+            'path': exp.path
         })
     }
 
-    async find(verb, from){
-        for (let i = 0; i < this.route[verb].length; i++) {
-            const item = this.route[verb][i];
-            console.log( item.from, from);
-            if(item.from == from){
-                const Ctl  = await import('../../app/Controller/' + item.to + ".js");
-                let ctl = new Ctl.default();
-                return ctl['index']();
-            }
+    async getRoute(verb, from){
+        if(from != '/'){
+            from = from.trim('/')
         }
-        return "";
+
+        let routeFinder = new RouteFinder(from, this.route[verb])
+        routeFinder.find()
+        
+        let result = routeFinder.getResult()
+        if(! result){
+            return "404 not found";
+        }else{
+            const Ctl  = await import('../../app/Controller/' + result.class + ".js");
+            let ctl = new Ctl.default();
+            return ctl[result.method](result.data);
+        }
     }
 }

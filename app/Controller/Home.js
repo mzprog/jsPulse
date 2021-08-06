@@ -1,5 +1,5 @@
 export default class Home{
-    index = () => {
+    index = (data) => {
         return `
         	<div>
           		<span><b>Some</b> HTML here</span>
@@ -7,4 +7,8 @@ export default class Home{
 			<a href="/from">from</a>
 		`;
     }
+
+	user = data => {
+		return "user = " + data.id
+	}
 }

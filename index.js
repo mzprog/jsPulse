@@ -9,7 +9,7 @@ const requestListner = async function(req, res) {
     res.setHeader('Content-type', 'text/html');
     res.writeHead(200)
     
-    res.end(await router.find(req.method,req.url))
+    res.end(await router.getRoute(req.method,req.url))
 }
 
 const server = createServer(requestListner)
