@@ -4,13 +4,12 @@ import router from './app/Config/Routes.js'
 const port = 9090
 const ROOT_DIR = process.cwd()
 
-const requestListner = function(req, res) {
+const requestListner = async function(req, res) {
 
     res.setHeader('Content-type', 'text/html');
     res.writeHead(200)
     
-    res.write("<b>route</b> to: "+router.find(req.method,req.url))
-    res.end('Hello, World!')
+    res.end(await router.find(req.method,req.url))
 }
 
 const server = createServer(requestListner)

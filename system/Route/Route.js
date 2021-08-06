@@ -25,12 +25,14 @@ export class Route{
         })
     }
 
-    find(verb, from){
+    async find(verb, from){
         for (let i = 0; i < this.route[verb].length; i++) {
             const item = this.route[verb][i];
             console.log( item.from, from);
             if(item.from == from){
-                return item.to
+                const Ctl  = await import('../../app/Controller/' + item.to + ".js");
+                let ctl = new Ctl.default();
+                return ctl['index']();
             }
         }
         return "";

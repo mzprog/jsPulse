@@ -4,6 +4,6 @@ const router = new Route()
 
 // Add routes from here
 router.get("/from","to")
-router.get('/',"index")
+router.get('/',"Home")
 
 export default  router 
