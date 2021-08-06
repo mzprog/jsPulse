@@ -1,5 +1,5 @@
 {
-  "name": "julse",
+  "name": "js-pulse",
   "version": "1.0.0",
   "description": "A simple js framework",
   "type": "module",
@@ -8,7 +8,7 @@
     "test": "node index.js"
   },
   "keywords": [
-    "pulse",
+    "js pulse",
     "webserver",
     "framework"
   ],
