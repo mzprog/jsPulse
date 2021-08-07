@@ -1,3 +1,5 @@
+import { view } from "../../system/common.js";
+
 export default class Home{
     index = (data) => {
         return `
@@ -12,5 +14,9 @@ export default class Home{
 
 	user = data => {
 		return "user = " + data.id
+	}
+
+	ejs = data => {
+		return view('index',{title:" MZ Title"})
 	}
 }
