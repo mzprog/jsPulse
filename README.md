@@ -1,2 +1,2 @@
 # jsPulse
-A simple js web ramework
+A simple js backend web framework
