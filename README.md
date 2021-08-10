@@ -26,3 +26,6 @@ run the server
     npm run test
     #or
     node index.js
+    
+### For more documantions 
+- [Getting start](https://github.com/mzprog/jsPulse/wiki)
