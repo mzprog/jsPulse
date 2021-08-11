@@ -1,8 +1,15 @@
 import { view } from "../../system/common.js";
+import { Model } from "../../system/Model/Model.js";
 
 export default class Home{
     index = (data) => {
-        return `
+		// testing here
+		let db = new Model({
+			table: "test",
+			fields: ["name"]
+		});
+
+		return `
 			<link rel="stylesheet" href="/css/style.css">
         	<div>
           		<span><b>Some</b> HTML here</span>
