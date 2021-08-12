@@ -8,7 +8,7 @@ export default class Home{
 			table: "test",
 			fields: ["name"]
 		});
-
+		db.insert({name:"123"})
 		return `
 			<link rel="stylesheet" href="/css/style.css">
         	<div>

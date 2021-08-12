@@ -6,6 +6,7 @@ export class BaseModel{
     #db
     #table
     #fields
+    #result
     
     constructor(data){
         if (data.table === undefined){
@@ -23,7 +24,61 @@ export class BaseModel{
             password: env.M_DB_PASS,
             database: env.M_DB_NAME
         })
-        //testing
-        this.#db.insert(this.#table, {name:"aaaa"}).then(ok => console.log(ok))
+        // TODO Validation here later
+    }
+
+    /**
+     * FILTERS
+     */
+    where(stem, value){
+        this.#db.where(stem, value)
+        return this
+    }
+
+    condition(cond){
+        this.#db.condition(cond)
+        return this
+    }
+
+    order(order){
+        this.#db.order(order)
+        return this
+    }
+
+    /**
+      * Modifier and joiners
+      */
+    join(table, field, key, tableName, join=''){
+        let thisTable = this.table
+        let condition = `${tableName}.${field} = ${thisTable}.${key}`
+
+        this.#db.join(table, condition, join, tableName)
+    }
+
+    /**
+      * OPERATIONS
+      */
+    select(data = null){
+        if(data != null){
+            this.#db.select(data)
+        }
+        return this.#db.table(this.#table).run()
+    }
+
+    insert(data){
+        for (const field in data) {            
+            if(! this.#fields.includes(field)){
+                throw `Undefined Field: ${field}`
+            }
+            return this.#db.insert(this.#table, data)
+        }
+    }
+
+    update(data){
+        return this.#db.table(this.#table).update(data).run()
+    }
+
+    SQL(query,data){
+        return this.#db.SQL(query, data)
     }
 }
