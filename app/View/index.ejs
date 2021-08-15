@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
 <head>
-    <title>EJS Engine Test</title>
+    <title>jsPulse Framework</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-  
-  <!- For printing variable these
-      tags are used: <%= %>  -->
-  <h1> <%= title %> </h1>
-     
-  <!- For business logic these
-      tags are used: <% %> -->
-  <% if(true){ %>
-      <h4>Greetings from MZPROG</h4> 
-  <% } %>
+<body class="bg-gray-200 h-full flex flex-col">
+    <h1 class="text-xl text-gray-400 bg-gray-800 text-center"> 
+        <%= date %>
+    </h1>
+    <div class=" grid place-items-center flex-1">
+        <div class="bg-gray-100 p-4 rounded shadow-lg">
+            <div class="">
+                <img src="/img/jspulse-logo.png" alt="logo" class="h-60">
+            </div>
+            <div class="flex justify-around text-gray-700">
+                <div>
+                    <a href="https://github.com/mzprog/jsPulse">Github</a>
+                </div>
+                <div>
+                    <a href="https://github.com/mzprog/jsPulse/wiki">Documentation</a>
+                </div>
+            </div>
+            <div class="pt-8 pb-2 text-center">
+                There's always an easy way to do things.
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,6 +2,7 @@ import { view } from "../../system/common.js";
 
 export default class Home{
     index = (data) => {
-		return view('index',{title:" MZ Title"})
+        let date = new Date()
+		return view('index',{date: date})
     }
 }
