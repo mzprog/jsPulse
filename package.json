@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "mon" : "nodemon index.js"
   },
   "keywords": [
     "js pulse",
