@@ -7,7 +7,8 @@
   "scripts": {
     "test": "node index.js",
     "mon": "nodemon index.js",
-    "build-css": "tailwindcss build app/asset/css/style.css -o public/css/style.css"
+    "build-css": "tailwindcss build app/asset/css/style.css -o public/css/style.css --jit --purge \"app/View/**.ejs\"",
+    "watch-css": "tailwindcss build app/asset/css/style.css -o public/css/style.css --jit --purge \"app/View/**.ejs\" -w"
   },
   "keywords": [
     "js pulse",
