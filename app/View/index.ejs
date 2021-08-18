@@ -1,28 +1,124 @@
 <!DOCTYPE html>
 <html class="h-full">
 <head>
-    <title>jsPulse Framework</title>
+    <title>Pulse Shop</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="bg-gray-200 h-full flex flex-col">
-    <h1 class="text-xl text-gray-400 bg-gray-800 text-center"> 
-        <%= date %>
-    </h1>
-    <div class=" grid place-items-center flex-1">
-        <div class="bg-gray-100 p-4 rounded shadow-lg">
-            <div class="">
-                <img src="/img/jspulse-logo.png" alt="logo" class="h-60">
-            </div>
-            <div class="flex justify-around text-gray-700">
-                <div>
-                    <a href="https://github.com/mzprog/jsPulse">Github</a>
+<body class="bg-gray-100 h-full flex flex-col">
+    <header class="text-xl text-gray-100 bg-gray-900 text-center font-bold">
+        <nav class="md:container md:mx-auto">
+            <div class="flex">
+                <a href="/" class="text-3xl p-4">
+                    <span class="text-gray-100">PULSE</span>
+                    <span class="text-red-500">SHOP</span>
+                </a>
+                <div class="flex flex-1 justify-end">
+                    <ul class="flex">
+                        <li class="mx-2 p-4 border-b-4 border-red-500"><a href="/">Home</a></li>
+                        <li class="mx-2 p-4"><a href="">Our Products</a></li>
+                        <li class="mx-2 p-4"><a href="">About Us</a></li>
+                        <li class="mx-2 p-4"><a href="">Contact Us</a></li>
+                    </ul>
                 </div>
-                <div>
-                    <a href="https://github.com/mzprog/jsPulse/wiki">Documentation</a>
+            </div>
+        </nav> 
+        
+    </header>
+    <div class="flex-1">
+        <div class="banner w-full h-96 overflow-hidden relative">
+            <img src="/img/banner1.jpg" alt="banner" class="w-full my-auto absolute inset-0">
+            <div class="absolute inset-0 grid place-items-center p-16">
+                <div class="text-xl text-red-500">
+                    FLASH DEALS
+                </div>
+                <div class="text-6xl text-gray-100">
+                    GET YOUR BEST PRODUCTS
+                </div>    
+            </div>
+            
+        </div>
+        <div class="container h-full mx-auto mt-16 ">
+            <div class="flex justify-between border-b-2 pb-4">
+                <div class="text-4xl capitalize md:uppercase">
+                    Latest Products
+                </div>
+                <div class="capitalize md:uppercase text-red-500">
+                    <a href="">View All products</a>
                 </div>
             </div>
-            <div class="pt-8 pb-2 text-center">
-                There's always an easy way to do things.
+            <div class="grid grid-cols-4 gap-8 mt-16">
+                <div class="shadow">
+                    <img src="/img/product_01.jpg" class="w-full">
+                    <div class="p-8">
+                        <div class="flex justify-between font-bold" >
+                            <a href="#" class="text-blue-400 text-xl">Tittle goes here</a>
+                            <div>$25.75</div>
+                        </div>
+                        <p class="my-4">
+                            Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="/img/product_02.jpg" class="w-full">
+                    <div class="p-8">
+                        <div class="flex justify-between font-bold" >
+                            <a href="#" class="text-blue-400 text-xl">Tittle goes here</a>
+                            <div>$30.25</div>
+                        </div>
+                        <p class="my-4">
+                            Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="/img/product_03.jpg" class="w-full">
+                    <div class="p-8">
+                        <div class="flex justify-between font-bold" >
+                            <a href="#" class="text-blue-400 text-xl">Tittle goes here</a>
+                            <div>$20.45</div>
+                        </div>
+                        <p class="my-4">
+                            Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="/img/product_04.jpg" class="w-full">
+                    <div class="p-8">
+                        <div class="flex justify-between font-bold" >
+                            <a href="#" class="text-blue-400 text-xl">Tittle goes here</a>
+                            <div>$15.25</div>
+                        </div>
+                        <p class="my-4">
+                            Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="/img/product_05.jpg" class="w-full">
+                    <div class="p-8">
+                        <div class="flex justify-between font-bold" >
+                            <a href="#" class="text-blue-400 text-xl">Tittle goes here</a>
+                            <div>$12.50</div>
+                        </div>
+                        <p class="my-4">
+                            Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <img src="/img/product_06.jpg" class="w-full">
+                    <div class="p-8">
+                        <div class="flex justify-between font-bold" >
+                            <a href="#" class="text-blue-400 text-xl">Tittle goes here</a>
+                            <div>$22.50</div>
+                        </div>
+                        <p class="my-4">
+                            Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
